@@ -31,7 +31,7 @@ services:
         generateValue: true # will generate a base64-encoded 256-bit secret
       - key: SECRET
         generateValue: true # will generate a base64-encoded 256-bit secret
-      - fromGroup: team-hub
+      fromGroup: team-hub
 
   # TeamHub frontent nuxt app
   - type: web
