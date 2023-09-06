@@ -27,7 +27,6 @@ services:
           name: tolli
           property: password
     numInstances: 1 # optional (defaults to 1)
-  # TeamHub frontent nuxt app
   - type: web
     plan: free
     name: teamhub-app
