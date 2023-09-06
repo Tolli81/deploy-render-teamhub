@@ -6,7 +6,7 @@ services:
     runtime: image
     image:
       url: docker.io/directus/directus:latest
-    region: frankfurt # optional (defaults to oregon)
+    region: frankfurt
     envVars:
       - fromGroup: team-hub
       - key: DB_CLIENT
@@ -30,6 +30,7 @@ services:
     numInstances: 1 # optional (defaults to 1)
   - type: web
     plan: free
+    region: frankfurt
     name: teamhub-app
     runtime: node
     repo: https://github.com/Tolli81/team-hub.git
