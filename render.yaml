@@ -36,13 +36,8 @@ services:
       name: data
       mountPath: /data
       sizeGB: 10 # optional
-    scaling:
-      minInstances: 1
-      maxInstances: 2
-      targetMemoryPercent: 60 # optional if targetCPUPercent is set
-      targetCPUPercent: 60 # optional if targetMemory is set
     buildCommand: yarn install
-    startCommand: yarn run
+#    startCommand: yarn run
     # domains:
     #   - teamhub.keppni.io
     #   - test1.render.com
