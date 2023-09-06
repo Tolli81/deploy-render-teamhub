@@ -34,7 +34,7 @@ services:
     runtime: node
     repo: https://github.com/Tolli81/team-hub.git
     rootDir: nuxt-app
-    buildCommand: yarn init
+    buildCommand: yarn build
     startCommand: yarn start
     domains:
       - teamhub.keppni.io
