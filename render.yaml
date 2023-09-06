@@ -32,7 +32,6 @@ services:
         generateValue: true # will generate a base64-encoded 256-bit secret
       - key: SECRET
         generateValue: true # will generate a base64-encoded 256-bit secret
-
   # TeamHub frontent nuxt app
   - type: web
     plan: free
@@ -44,6 +43,5 @@ services:
 #    startCommand: yarn run
      domains:
        - teamhub.keppni.io
-
     autoDeploy: false # optional
 
