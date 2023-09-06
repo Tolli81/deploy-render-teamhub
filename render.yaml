@@ -9,7 +9,6 @@ services:
     region: frankfurt # optional (defaults to oregon)
     numInstances: 1 # optional (defaults to 1)
     envVars:
-      - fromGroup: team-hub
       - key: DB_CLIENT
         value: pg
       - key: DB_HOST
