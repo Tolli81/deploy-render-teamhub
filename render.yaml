@@ -8,6 +8,7 @@ services:
       url: docker.io/directus/directus:latest
     region: frankfurt # optional (defaults to oregon)
     envVars:
+      - fromGroup: team-hub
       - key: DB_CLIENT
         value: pg
       - key: DB_HOST
