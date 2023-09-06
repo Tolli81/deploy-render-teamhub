@@ -1,5 +1,4 @@
 services:
-
   # Directus
   - type: web
     plan: free
@@ -28,7 +27,6 @@ services:
           name: tolli
           property: password
     numInstances: 1 # optional (defaults to 1)
-
   # TeamHub frontent nuxt app
   - type: web
     plan: free
@@ -40,6 +38,5 @@ services:
 #    startCommand: yarn run
      domains:
        - teamhub.keppni.io
-    #   - test1.render.com
 
     autoDeploy: false # optional
