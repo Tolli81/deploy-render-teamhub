@@ -36,6 +36,9 @@ services:
     rootDir: nuxt-app
     buildCommand: yarn; yarn build
     startCommand: yarn start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.5.0
     domains:
       - teamhub.keppni.io
 
