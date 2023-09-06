@@ -1,4 +1,5 @@
 services:
+
   # Directus
   - type: web
     plan: free
@@ -7,7 +8,6 @@ services:
     image:
       url: docker.io/directus/directus:latest
     region: frankfurt # optional (defaults to oregon)
-    numInstances: 1 # optional (defaults to 1)
     envVars:
       - key: DB_CLIENT
         value: pg
@@ -27,10 +27,7 @@ services:
         fromDatabase:
           name: tolli
           property: password
-      - key: KEY
-        generateValue: true # will generate a base64-encoded 256-bit secret
-      - key: SECRET
-        generateValue: true # will generate a base64-encoded 256-bit secret
+    numInstances: 1 # optional (defaults to 1)
 
   # TeamHub frontent nuxt app
   - type: web
