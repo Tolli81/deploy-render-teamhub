@@ -1,6 +1,7 @@
 services:
   # Directus
   - type: web
+    plan: free
     name: directus
     runtime: image
     image:
@@ -28,6 +29,7 @@ services:
           property: password
   # TeamHub frontent nuxt app
   - type: web
+    plan: free
     name: teamhub-app
     runtime: docker
     repo: https://github.com/Tolli81/team-hub.git
