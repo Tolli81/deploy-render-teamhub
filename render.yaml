@@ -3,7 +3,8 @@ services:
   - type: web
     name: directus
     runtime: image
-    url: docker.io/directus/directus:latest
+    image:
+      url: docker.io/directus/directus:latest
     region: frankfurt # optional (defaults to oregon)
     numInstances: 1 # optional (defaults to 1)
     envVars:
