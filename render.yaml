@@ -28,7 +28,6 @@ services:
         fromDatabase:
           name: tolli
           property: password
-  # TeamHub frontent nuxt app
   - type: web
     plan: free
     name: teamhub-app
