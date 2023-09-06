@@ -34,7 +34,8 @@ services:
     runtime: docker
     repo: https://github.com/Tolli81/team-hub.git
     rootDir: nuxt-app
-    buildCommand: yarn install
+    buildCommand: yarn init
+    startCommand: yarn start
     domains:
       - teamhub.keppni.io
 
