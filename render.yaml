@@ -34,8 +34,7 @@ services:
     repo: https://github.com/Tolli81/team-hub.git
     rootDir: nuxt-app
     buildCommand: yarn install
-#    startCommand: yarn run
-     domains:
-       - teamhub.keppni.io
+    domains:
+      - teamhub.keppni.io
 
     autoDeploy: false # optional
