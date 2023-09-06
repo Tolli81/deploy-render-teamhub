@@ -1,0 +1,50 @@
+services:
+  # Directus
+  - type: web
+    name: directus
+    runtime: image
+    url: docker.io/directus/directus:latest
+    region: frankfurt # optional (defaults to oregon)
+    numInstances: 1 # optional (defaults to 1)
+    envVars:
+      - key: DB_CLIENT
+        value: pg
+      - key: DB_HOST
+        fromDatabase:
+          name: tolli
+          property: host
+      - key: DB_PORT
+        value: 5432
+      - key: DB_DATABASE
+        value: teamhub_prod
+      - key: DB_USER
+        fromDatabase:
+          name: tolli
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: tolli
+          property: password
+  # TeamHub frontent nuxt app
+  - type: web
+    name: teamhub-app
+    runtime: docker
+    repo: https://github.com/Tolli81/team-hub.git
+    rootDir: nuxt-app
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 10 # optional
+    scaling:
+      minInstances: 1
+      maxInstances: 2
+      targetMemoryPercent: 60 # optional if targetCPUPercent is set
+      targetCPUPercent: 60 # optional if targetMemory is set
+    buildCommand: yarn install
+    startCommand: yarn run
+    # domains:
+    #   - teamhub.keppni.io
+    #   - test1.render.com
+
+    autoDeploy: false # optional
+
