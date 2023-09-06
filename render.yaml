@@ -27,6 +27,12 @@ services:
         fromDatabase:
           name: tolli
           property: password
+      - key: KEY
+        generateValue: true # will generate a base64-encoded 256-bit secret
+      - key: SECRET
+        generateValue: true # will generate a base64-encoded 256-bit secret
+
+  # TeamHub frontent nuxt app
   - type: web
     plan: free
     name: teamhub-app
@@ -37,5 +43,6 @@ services:
 #    startCommand: yarn run
      domains:
        - teamhub.keppni.io
-    autoDeploy: false # optional
+    #   - test1.render.com
 
+    autoDeploy: false # optional
