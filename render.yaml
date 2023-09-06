@@ -2,7 +2,7 @@ services:
   # Directus
   - type: web
     plan: free
-    name: directus
+    name: teamhub-directus
     runtime: image
     image:
       url: docker.io/directus/directus:latest
