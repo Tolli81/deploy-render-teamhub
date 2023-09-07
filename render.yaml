@@ -9,6 +9,8 @@ services:
     region: frankfurt
     envVars:
       - fromGroup: team-hub
+      - key: PUBLIC_URL 
+        value: https://backend.teamhub.keppni.io
       - key: DB_CLIENT
         value: pg
       - key: DB_HOST
@@ -28,6 +30,8 @@ services:
           name: tolli
           property: password
     numInstances: 1 # optional (defaults to 1)
+    domains:
+      - backend.teamhub.keppni.io
   - type: web
     plan: free
     region: frankfurt
